@@ -123,7 +123,7 @@ def DLIP_Algorithm(data):
 
     # Finding pseudoinverse of A
     rg_m = LA.matrix_rank(A) # Range of Matrix A
-    Ap = LA.pinv(A) # A.T*(A*A.T)**-1
+    Ap = LA.pinv(A) # Calculate pseudoinverse using SVD
     del A
     S2 = Ap.dot(S1) # Array
     S3 = np.reshape(S2,(len(y_c),len(x_c)))
