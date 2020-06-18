@@ -91,9 +91,9 @@ def FDBP_Algorithm(data1):
     if show:
         dF.rangeProfile(fi,BW,Sr_f[int(len(Sr_f)/2)],name_title='Perfil de rango\n(Magnitud)')
 
-    # Hanning Windows
-    Sr_f *= np.hanning(len(Sr_f[0])) # Multiply rows x hanning windows
-    Sr_f = (Sr_f.T*np.hanning(len(Sr_f))).T # Multiply columns x hanning windows
+    # Hamming Windows
+    Sr_f *= np.hamming(len(Sr_f[0])) # Multiply rows x hamming windows
+    Sr_f = (Sr_f.T*np.hamming(len(Sr_f))).T # Multiply columns x hamming windows
 
     #----------PRIMERA ETAPA: 1D-IFFT respecto al eje de la 'f'-----------
     #---------------------------------------------------------------------

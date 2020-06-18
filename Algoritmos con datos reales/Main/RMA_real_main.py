@@ -97,9 +97,9 @@ def RMA_Algorithm(data1):
     if show:
         dF.rangeProfile(fi,BW,Sr_f[int(len(Sr_f)/2)],name_title='Perfil de rango \n(Al principio)')
 
-    # Hanning Windows
-    Sr_f *= np.hanning(len(Sr_f[0])) # Multiply rows x hanning windows 
-    Sr_f = (Sr_f.T*np.hanning(len(Sr_f))).T # Multiply columns x hanning windows
+    # Hamming Windows
+    Sr_f *= np.hamming(len(Sr_f[0])) # Multiply rows x hamming windows 
+    Sr_f = (Sr_f.T*np.hamming(len(Sr_f))).T # Multiply columns x hamming windows
         
     #----------------ETAPA PREVIA: Range Compression----------------------
     #                       s(x,w) --> s(x,r)
